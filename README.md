@@ -1,4 +1,4 @@
-# 南开大学亿灵官方网站HomePage
+<h2 align="center">南开大学亿灵官方网站HomePage</h2>
 
 
 ## 前言
