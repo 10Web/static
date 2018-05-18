@@ -1,0 +1,317 @@
+body {
+	min-width: 1000px;
+}
+
+/*slider部分*/
+
+.am-text-wrapper {
+	margin: 0 auto;
+	width: 1000px;
+	height: 100%;
+	position: relative;
+}
+
+#am-text {
+	z-index: 1000;
+	background-color: rgba(233, 233, 233, 0.76);
+	width: 440px;
+	height: 143px;
+	padding: 16px 10px;
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+}
+
+#am-text h2 {
+	margin: 0;
+}
+
+.am-text-style {
+	font-size: 16px;
+	margin: 0;
+}
+
+.am-text-footer {
+	float: right;
+	font-size: 16px;
+	margin: 0;
+}
+
+.director {
+	position: absolute;
+	right: 0;
+	bottom: 20px;
+}
+
+#prev {
+	z-index: 1000;
+	color: #ccc !important;
+	font-size: 20px;
+}
+
+#prev:hover {
+	color: #999 !important;
+}
+
+#next {
+	z-index: 1000;
+	float: right;
+	color: #ccc !important;
+	margin-left: 20px;
+	font-size: 20px;
+}
+
+#next:hover {
+	color: #999 !important;
+}
+
+.am-fontsize {
+	font-size: 18px !important;
+	width: 75%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.am-wrap1 {
+	margin: 30px 0;
+}
+
+.am-wrap2 {
+	margin: 0 0 10% 0;
+}
+
+.am-pic {
+	height: 390px;
+	background-color: #333333;
+}
+
+#wrapper {
+	height: 400px;
+}
+
+#am-imglist {
+	height: 390px;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+#am-imglist li {
+	float: left;
+	display: inline;
+	height: 100%;
+	width: 100%;
+}
+
+#am-imglist li img {
+	height: 100%;
+}
+
+/*------>添加部分*/
+
+#am-banner {
+	height: 390px;
+	position: relative;
+}
+
+/*四大板块*/
+
+.detail {
+	margin-top: 17px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.detail a:link {
+	color: #000;
+}
+
+.detail a:visited {
+	color: #000;
+}
+
+.detail-item {
+	width: 235px;
+	height: 249px;
+	background-color: rgba(233, 233, 233, 0.76);
+	margin-right: 6px;
+	float: left;
+}
+
+.detail-item:hover {
+	background-color: rgba(80, 80, 85);
+	-webkit-filter: invert(1);
+	-moz-filter: invert(1);
+	-ms-filter: invert(1);
+	-o-filter: invert(1);
+	filter: invert(1);
+}
+
+.detail-item-icon {
+	padding: 17px;
+	margin-bottom: 5px;
+}
+
+.detail-item-icon img {
+	height: 50px;
+	width: 50px;
+}
+
+.detail-item .intro .title {
+	font-size: 20px;
+}
+
+.detail-item .intro .am-fontsize {
+	font-size: 15px !important;
+	margin-top: 20px;
+}
+
+/*内容简介部分*/
+
+.am-divide {
+	font-size: 20px;
+	text-align: center;
+	background-color: rgba(233, 233, 233, 0.76);
+	height: 60px;
+	line-height: 60px;
+}
+
+.am-summary {
+	min-height: 270px;
+}
+
+.am-summary1 {
+	width: 25%;
+	float: left;
+	margin: 3% 0;
+}
+
+.am-summary1 a:link {
+	color: #000;
+}
+
+.am-summary-pic {
+	width: 100%;
+	background-image: url(/assets/i/photo_box.png);
+	height: 173px;
+	background-size: cover;
+	padding: 14px 10px 23px 17px;
+}
+
+.am-summary-pic img {
+	height: 100%;
+	width: 100%;
+}
+
+.am-summary-title,
+.am-summary-content {
+	text-align: center;
+	margin: 0;
+	color: black;
+}
+
+.am-summary-content {
+	font-size: 15px;
+	width: 80%;
+	margin: 0 auto !important;
+}
+
+.am-summary-title {
+	padding: 0 30px;
+}
+
+/*下拉加载*/
+
+.am-drop {
+	color: #404046 !important;
+	text-align: center;
+	margin: 0 0 10px 0;
+	font-size: 20px;
+	cursor: pointer;
+	position: relative;
+	height: 50px;
+}
+
+.am-drop>span {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.am-drop:hover {
+	color: #666 !important;
+}
+
+/*底栏动画*/
+
+.hope {
+	background: #333333;
+	padding: 50px 0;
+	height: 340px;
+}
+
+.hope-content {
+	font-size: 20px;
+}
+
+.hope-font {
+	color: #ffffff !important;
+	font-size: 20px;
+}
+
+.hope-title {
+	font-size: 30px;
+}
+
+.am-leftpart,
+.am-rightpart {
+	width: 500px;
+}
+
+.am-leftpart {
+	float: left;
+}
+
+.am-rightpart {
+	margin: 0 0 0 500px;
+}
+
+.clear {
+	overflow: hidden;
+}
+
+/*底部友情链接*/
+
+.footer p {
+	color: #7f8c8d;
+	margin: 0;
+	padding: 15px 0;
+	text-align: center;
+	background: #333333;
+}
+
+#am-imglist {
+	height: 390px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: -1;
+	background-color: #AAAAAA;
+	overflow: hidden;
+}
+
+#am-imglist li {
+	float: left;
+	display: inline;
+	height: 100%;
+	width: 100%;
+}

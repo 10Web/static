@@ -61,3 +61,5 @@ package-lock.json
 auto_router.js
 runtime_config.json
 
+
+.DS_Store

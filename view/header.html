@@ -1,0 +1,187 @@
+<style type="text/css">
+    .am-topbar-height {
+        height: 100px !important;
+        margin-left: 0 !important;
+        float: left;
+    }
+
+    .am-topbar-white {
+        background-color: #ffffff !important;
+        height: 110px;
+        z-index: 2000 !important;
+    }
+
+    .am-topbar-wrapper {
+        width: 1000px !important;
+        height: 110px;
+        margin: 0 auto;
+
+    }
+
+    .am-right-wrapper {
+        float: right;
+    }
+
+    .am-font {
+        color: #ffffff !important;
+    }
+
+    .am-hover {
+        color: #999999 !important;
+    }
+
+    #am-wrapper {
+        margin-top: 60px;
+    }
+
+    .am-banner {
+        width: 100%;
+    }
+
+    .am-header-border {
+        height: 10px;
+        background-color: #000000;
+        width: 100%;
+    }
+
+    .am-navbarr {
+        float: right;
+        display: inline;
+    }
+
+    .dis {
+        font-size: 16px;
+        display: inline-block;
+        padding: 0 2%;
+        height: 95px;
+        text-align: center;
+    }
+
+    .am-topbar-white .am-span {
+        font-weight: bold;
+        height: 99px;
+        float: left;
+        width: 10%;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .am-span:hover {
+        background-color: #f8f8f8;
+    }
+
+    .am-navvv {
+        width: 100% !important;
+        text-align: center;
+    }
+
+    .am-content {
+        opacity: 0.8 !important;
+        background-color: #f8f8f8 !important;
+        margin: -10px 0 0 !important;
+    }
+
+    .am-brand {
+        height: 100px !important;
+        width: 100%;
+        line-height: 110px !important;
+        float: left;
+    }
+
+    .am-topright {
+        line-height: 110px !important;
+        height: 100px !important;
+        font-size: 16px;
+        padding: 0 20px 0 20px;
+        margin: 0 !important;
+    }
+
+    .am-topright:hover {
+        background-color: #f8f8f8 !important;
+    }
+
+    /*右边的用户头像和登录注册按钮*/
+
+    /*重写amaze ui 样式*/
+
+    #header-right .am-dropdown-content {
+        width: 110px;
+        min-width: 0;
+        text-align: center;
+    }
+
+    .header-user-icon {
+        line-height: 100px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .header-user-icon img {
+        height: 45px;
+        width: 45px;
+        border-radius: 100%;
+    }
+
+    .red-point {
+        height: 10px;
+        width: 10px;
+        background: #ea6f5a;
+        position: absolute;
+        left: 45px;
+        top: calc(50% + 10px);
+        border-radius: 100%;
+    }
+</style>
+
+<header class="am-topbar am-topbar-fixed-top am-topbar-white">
+    <div class="am-header-border ">
+    </div>
+    <div class="am-topbar-wrapper">
+        <div class="am-g am-container am-topbar-height">
+            <div class="am-topbar-brand am-brand">
+                <div style="float:left;">
+                    <a href="<%= prefix %>">
+                        <img src="<%= prefix %>/assets/i/10_mian_logo.png" style="height:60px; margin:0 1%;" />
+                    </a>
+                </div>
+
+                <div class="am-span">
+                    <a class="am-dropdown-toggle" href="<%= prefix %>">
+                        <span class="dis">首页</span>
+                    </a>
+                </div>
+
+                <div class="am-span">
+                    <a class="am-dropdown-toggle" href="<%= prefix %>/opensource">
+                        <span class="dis">项目</span>
+                    </a>
+                </div>
+
+                <div class="am-span ">
+                    <a class="am-dropdown-toggle" data-am-dropdown-toggle="" href="javascript:;">
+                        <li class="am-dropdown am-navvv" data-am-dropdown="">
+                            <span class="dis ">导航</span>
+                    </a>
+                    <ul class="am-dropdown-content am-content">
+                        <li>
+                            <a href="<%= prefix %>/about">社团简介</a>
+                        </li>
+                        <li>
+                            <a href="<%= prefix %>/opensource">开源项目</a>
+                        </li>
+                        <li>
+                            <a href="<%= prefix %>/activity">社团活动</a>
+                        </li>
+                        <li>
+                            <a href="<%= prefix %>/webtools">web工具</a>
+                        </li>
+                    </ul>
+                    </li>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</header>
