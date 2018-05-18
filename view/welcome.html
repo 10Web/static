@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      outline: none;
+    }
+    body {
+      padding: 25px;
+    }
+    .title-logo{
+      width: 35px;
+      height: 40px;
+      vertical-align: middle;
+    }
+    .title-text{
+      margin-left: 15px;
+    }
+    .content{
+      margin-top: 10px;
+      border: 1px solid #eee;
+      border-radius: 4px;
+      padding: 20px;
+    }
+    h3{
+      margin: 20px 0 10px 0;
+    }
+    pre {
+      margin-top: 10px;
+      font-size: 13px;
+      color: #333;
+    }
+  </style>
+  <h1 class="title">
+    <img src="<%= prefix %>/assets/static/img/logo.png" alt="logo" class="title-logo">
+    <span class="title-text">Welcome to Honeycomb!</span>
+  </h1>
+  <div class="content">
+    <h2>快速入门</h2>
+    <h3>编写控制器</h3>
+    <pre>
+  // controller/hello.js
+  /**
+  * @api {get} /hello
+  */
+  exports.hello = (req, callback) => {
+      callback(null, 'world');
+  };
+    </pre>
+    <h3>中间件使用(middleware)</h3>
+    <p>在honeybee应用框架中，使用读取配置的方法加载中间件，因此绝大多数的中间件只需修改配置文件即可使用，例如加载webpack中间件：</p>
+    <pre>
+  // config/config_default.js
+  // ...
+  middleware: {
+    webpack: {
+      enable: true,
+      module: 'honeypack',  // 需要通过tnpm i honeypack --save来安装依赖
+      router: '/assets'
+    },
+    spa: {
+      enable: true
+    }
+  }
+  // ...
+    </pre>
+  </div>
+</body>
+</html>
