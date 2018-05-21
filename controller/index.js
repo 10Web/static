@@ -41,3 +41,15 @@ exports.opensource = function (req, callback) {
   }, 'html');
 };
 
+/**
+ * @api /:name
+ * @description 用于处理未监听的界面
+ */
+exports.error = function (req, callback) {
+  callback(null, {
+    tpl: 'error.html',
+    data: {
+      prefix: config.prefix === '/' ? '' : config.prefix
+    }
+  }, 'html');
+};
