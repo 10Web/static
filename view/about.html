@@ -1,0 +1,154 @@
+<%- include('./begin.html') %>
+    <style>
+        .main {
+            padding: 50px 30px;
+            overflow: hidden;
+        }
+
+        .main .left {
+            float: left;
+            width: 50%;
+            text-align: right;
+            padding-right: 50px;
+        }
+
+        .main .right {
+            float: right;
+            width: 50%;
+        }
+
+        .main .right h1 {
+            font-family: serif;
+            font-size: 39px;
+        }
+
+        .main .right .buttons {
+            position: relative;
+        }
+
+        .main .right .buttons .qrcode{
+            position: absolute;
+            left: 20px;
+            top: -130px;
+            background: white;
+            display: none;
+        }
+
+        .main .right .button {
+            height: 45px;
+            width: 163px;
+            border: 1px solid rgb(66, 65, 65);
+            display: block;
+            line-height: 45px;
+            border-radius: 25px;
+            float: left;
+            margin-right: 20px;
+            cursor: pointer;
+            color: black;
+            position: relative;
+        }
+
+        .main .right .wechat {
+            width: 170px;
+            text-indent: 50px;
+            color: #00ad38;
+            border-color: #00ad38;
+        }
+
+        .main .right .github {
+            text-indent: 60px;
+            background: #f6f6f6;
+            color: #333;
+            border-color: #f6f6f6;
+        }
+
+        .main .right .button img {
+            position: absolute;
+            left: 3px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .introduction {
+            list-style: none;
+            overflow: hidden;
+        }
+
+        .introduction>li {
+            float: left;
+            width: 30%;
+            text-align: center;
+            padding: 0 30px;
+        }
+    </style>
+
+    <body>
+        <%- include('./header.html') %>
+            <!-- 第一块文字介绍 -->
+            <div class="comWidth">
+                <div class="main">
+                    <div class="left">
+                        <img alt="亿灵logo" src="<%= prefix %>/assets/i/small_logo.png">
+                    </div>
+                    <div class="right">
+                        <h1>
+                            亿灵
+                            <br /> 南开最酷的科技社团
+                        </h1>
+                        <div class="buttons">
+                            <a class="button wechat" id="wechat">
+                                <img alt="wechat" src="<%= prefix %>/assets/i/wechat.png" height="45px"> 微信公众平台
+                            </a>
+                            <div class="qrcode">
+                                <img height="117px" width="118px" src="<%= prefix %>/assets/i/qrcode.png" alt="qrcode:公众号[NKU_Eling]" />
+                            </div>
+                            <a class="button github" href="https://github.com/10Web" target="_blank">
+                                <img alt="github" src="<%= prefix %>/assets/i/github.png" height="40px"> GITHUB
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第二块文字介绍,包括历史，使命，加入我们 -->
+                <div>
+                    <ul class="introduction">
+                        <li>
+                            <h2>历史</h2>
+                            社团依托软件学院建立，创建自2002年10月24日，至今已创建了
+                            <span id="day"></span>天
+                        </li>
+                        <li>
+                            <h2>使命</h2>
+                            创造有趣的软件，玩转最新的最酷的技术，是我们不断的追求
+                        </li>
+                        <li>
+                            <h2>加入我们</h2>
+                            <img height="234px" width="237px" src="<%= prefix %>/assets/i/qrcode.png" alt="qrcode:公众号[NKU_Eling]" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <%- include('./footer.html') %>
+                <script>
+                    // 计算从2002年10月24号到今天的时间
+                    const begin = new Date('2002-10-24');
+                    const end = new Date();
+                    const days = (((Number(end) - Number(begin)) / 1000) / 3600) / 24;
+                    $('#day').text(Math.round(days));
+
+                    // ============
+                    // 处理点击[微信公众平台]时的效果
+                    // ============
+                    $('#wechat').click(() => {
+                        const $qrcode = $('.qrcode');
+                        const state = $qrcode.css('display');
+                        if(state === 'none'){
+                            $qrcode.css('display', 'block');
+                        }else{
+                            $qrcode.css('display', 'none');
+                        }
+                    });
+                </script>
+    </body>
+
+    </html>
