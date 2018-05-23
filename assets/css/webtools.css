@@ -2,10 +2,12 @@
     height:58px;
 }
 .services{
-    background:#f2fbfa;
+    background: white;
+    overflow: hidden
 }
-.agile-heading h3{
+.agile-heading{ 
     text-align:center;
+    padding: 30px;
 }
 .wthree-services-grid {
     overflow: hidden;

@@ -42,6 +42,18 @@ exports.opensource = function (req, callback) {
 };
 
 /**
+ * @api /webtools
+ */
+exports.webtools = function(req, callback){
+  callback(null, {
+    tpl: 'webtools.html',
+    data: {
+      prefix: config.prefix === '/' ? '' : config.prefix
+    }
+  }, 'html');
+}
+
+/**
  * @api /:name
  * @description 用于处理未监听的界面
  */
