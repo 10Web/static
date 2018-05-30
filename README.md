@@ -21,13 +21,32 @@
      ```
 
  - 安装项目依赖包
-```
+```bash
 $ npm install
 ``` 
  - 启动
-```
+```bash
 $ honeycomb start
 ``` 
+
+## windows下打包
+为了加速打包，我们不使用原生的npm，而使用第三方提供[yarn](https://yarnpkg.com/zh-Hans/)
+
+step1: yarn设置淘宝镜像
+
+```bash
+    $ yarn config set registry https://registry.npm.taobao.org
+```
+
+step2: 替换makefile里面的 npm -> yarn
+
+step3: 打包
+
+```
+$ honeycomb pack
+```
+
+
 
 ## 整体规划
 

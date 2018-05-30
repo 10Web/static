@@ -1,6 +1,6 @@
 install:
-	@cnpm install
-	@cd assets && cnpm install
+	@yarn install
+	@cd assets && yarn install
 
 release: front
 	@echo "env: ${env}"
@@ -11,7 +11,7 @@ release: front
 	else\
 		rsync -av . out/release --exclude .git --exclude node_modules --exclude out --exclude test;\
 	fi
-	@cd out/release && NODE_ENV=${env} cnpm install
+	@cd out/release && NODE_ENV=${env} yarn install
 	@if [ -f out/release/config/config_${env}.js ]; then\
 		cp out/release/config/config_${env}.js out/release/config/config.js;\
 	fi
