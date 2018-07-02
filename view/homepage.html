@@ -95,14 +95,16 @@
     <script>
         //banner滚动
         var banner_po = 0;
-        var banner_len = $("#am-imglist li").length;
+        var banner_len = $("#am-imglist li").length-1;
 
         $(function () {
             $("#next").click(function nexp() {
                 if (banner_po == banner_len) {
                     banner_po = 0;
                 }
+                else{
                 banner_po++;
+                }
                 $("#am-imglist li").eq(banner_po).fadeIn(600).siblings().hide();
             });
 
@@ -110,7 +112,9 @@
                 if (banner_po == 0) {
                     banner_po = banner_len;
                 }
+                else{
                 banner_po--;
+                }
                 $("#am-imglist li").eq(banner_po).fadeIn(600).siblings().hide();
             });
         });
