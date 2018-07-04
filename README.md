@@ -70,7 +70,7 @@ step1: yarn设置淘宝镜像
 step2: 打包
 
 ```
-$ honeycomb pack
+    $ honeycomb pack
 ```
 
 
@@ -109,7 +109,6 @@ $ honeycomb pack
 - [x] 第一期静态界面
 - [x] 常用界面-文章
 - [x] 常用界面-用户登录注册
-
 
                                                                                                          
                                                                                                          
