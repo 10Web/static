@@ -1,5 +1,16 @@
 <h2 align="center">南开大学亿灵官方网站HomePage</h2>
 
+<!-- TOC -->
+
+- [前言](#%E5%89%8D%E8%A8%80)
+- [Quick Start](#quick-start)
+    - [Linux/Mac](#linuxmac)
+    - [Windows](#windows)
+        - [windows下yarn的使用](#windows%E4%B8%8Byarn%E7%9A%84%E4%BD%BF%E7%94%A8)
+- [整体规划](#%E6%95%B4%E4%BD%93%E8%A7%84%E5%88%92)
+- [工作规划](#%E5%B7%A5%E4%BD%9C%E8%A7%84%E5%88%92)
+
+<!-- /TOC -->
 
 ## 前言
 
@@ -13,24 +24,42 @@
 
 ## Quick Start
 
- - 环境依赖
-    - nodejs
-    - honeycomb-cli
-     ```
-     $ npm install honeycomb-cli -g
-     ```
+### Linux/Mac
+ 
+- 环境依赖
+  - nodejs
+  - honeycomb-cli
+    ```
+    $ npm install honeycomb-cli -g
+    ```
+- 安装项目依赖包
+    ```bash
+    $ npm install
+    ``` 
+- 启动
+    ```bash
+    $ honeycomb start
+    ``` 
+- 打包
+    ```
+    honeycomb pack
+    ```
+### Windows
+
+- 环境依赖
+  - nodejs
+  - honeycomb-cli
+  - git-bash
+  - [yarn](https://yarnpkg.com/zh-Hans/)
+  - 可参考[链接](https://yuque.com/honeycomb/honeycomb/dev-win)
+- 注意：
+    - 安装好yarn建议先使用
+    ```
+    $ yarn cache clean
+    ```
 
- - 安装项目依赖包
-```bash
-$ npm install
-``` 
- - 启动
-```bash
-$ honeycomb start
-``` 
-
-## windows下打包
-为了加速打包，我们不使用原生的npm，而使用第三方提供[yarn](https://yarnpkg.com/zh-Hans/)
+#### windows下yarn的使用
+为了加速打包，我们不使用原生的npm，而使用第三方提供yarn
 
 step1: yarn设置淘宝镜像
 
@@ -38,9 +67,7 @@ step1: yarn设置淘宝镜像
     $ yarn config set registry https://registry.npm.taobao.org
 ```
 
-step2: 替换makefile里面的 npm -> yarn
-
-step3: 打包
+step2: 打包
 
 ```
 $ honeycomb pack
