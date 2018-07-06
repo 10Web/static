@@ -68,6 +68,7 @@ step1: yarn设置淘宝镜像
 ```
 
 step2: 打包
+
 将Makefile中的cnpm 或 npm 替换为 yarn
 
 ```
