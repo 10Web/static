@@ -1,5 +1,7 @@
 <h2 align="center">南开大学亿灵官方网站HomePage</h2>
 
+[![CircleCI](https://circleci.com/gh/10Web/static.svg?style=svg)](https://circleci.com/gh/10Web/static)
+
 <!-- TOC -->
 
 - [前言](#%E5%89%8D%E8%A8%80)
