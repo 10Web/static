@@ -23,5 +23,9 @@ module.exports = {
     }
   },
   extension: {
+  },
+  talks: {
+    key: '26aa200488ea20670252',
+    secret: '5bdf3c13ca9548b14a14d71e83a101aa2c646bd7'
   }
 };

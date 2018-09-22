@@ -54,6 +54,21 @@ exports.webtools = function(req, callback){
 }
 
 /**
+ * 
+ * @api /talks
+ */
+exports.words = function(req, callback){
+  callback(null, {
+    tpl: 'talks.html',
+    data: {
+      prefix: config.prefix === '/' ? '' : config.prefix,
+      key: config.talks.key,
+      secret: config.talks.secret
+    }
+  }, 'html');
+}
+
+/**
  * @api /:name
  * @description 用于处理未监听的界面
  */
