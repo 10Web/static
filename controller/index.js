@@ -44,20 +44,20 @@ exports.opensource = function (req, callback) {
 /**
  * @api /webtools
  */
-exports.webtools = function(req, callback){
+exports.webtools = function (req, callback) {
   callback(null, {
     tpl: 'webtools.html',
     data: {
       prefix: config.prefix === '/' ? '' : config.prefix
     }
   }, 'html');
-}
+};
 
 /**
- * 
+ *
  * @api /talks
  */
-exports.words = function(req, callback){
+exports.words = function (req, callback) {
   callback(null, {
     tpl: 'talks.html',
     data: {
@@ -66,7 +66,7 @@ exports.words = function(req, callback){
       secret: config.talks.secret
     }
   }, 'html');
-}
+};
 
 /**
  * @api /:name

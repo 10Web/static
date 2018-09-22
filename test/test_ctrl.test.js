@@ -43,7 +43,7 @@ describe('test_ctrl.js', () => {
         .get(app.config.prefix + '/api/hello_gen')
         .expect('Content-Type', /json/)
         .expect(200)
-        .expect({"code":"SUCCESS","data":"hello"})
+        .expect({code: 'SUCCESS', data: 'hello'})
         .end(done);
     });
   });

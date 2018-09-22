@@ -1,4 +1,4 @@
-/*!
+/* !
  * dtboost-example: app.js
  * Create   : 2017-03-09 15:18:43
  * CopyRight 2017 (c) Alibaba Group
