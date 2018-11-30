@@ -24,7 +24,7 @@
   "homepage": "https://github.com/node-honeycomb/hc-boilerplate#readme",
   "dependencies": {
     "hc-bee": "^0.0.4",
-    "lodash": "4.17.4"
+    "lodash": "4.17.5"
   },
   "devDependencies": {
     "api-annotation": "^1.0.0-alpha.2",
