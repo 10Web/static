@@ -1,123 +1,114 @@
 <%- include('./begin.html') %>
 
-    <body class="am-with-topbar-fixed-top">
-        <%- include('./header.html') %>
-            <div id="am-wrapper">
-                <div id="am-banner">
-                    <div class="am-text-wrapper">
-                        <!-- 中间的文字 -->
-                        <div id="am-text">
-                            <h2>你是开发的艺术家</h2>
-                            <p class="am-text-style">南开亿灵软件联盟是一个软件艺术联盟。所有你做的，不过是往艺术的道路更进一步</p>
-                            <p class="am-text-footer">—今日语录—</p>
-                        </div>
-                        <!-- 两个指向按钮 -->
-                        <!-- 两个指向按钮 -->
-                        <div class="director">
-                            <a class="am-icon-chevron-circle-right am-icon-lg" id="next" href="#"></a>
-                            <a class="am-icon-chevron-circle-left am-icon-lg" id="prev" href="#"></a>
-                        </div>
-                    </div>
-
-                    <ul id="am-imglist">
-                        <li>
-                            <img src="<%= prefix %>/assets/i/banner.png" class="am-banner">
-                        </li>
-                        <li>
-                            <img src="<%= prefix %>/assets/i/banner2.jpg" class="am-banner">
-                        </li>
-                        <!-- <li>
-                        <img src="<%= prefix %>/assets/i/banner3.png" class="am-banner">
-                    </li> -->
-                    </ul>
+<body class="am-with-topbar-fixed-top" onload="load_inndex()">
+    <%- include('./header.html') %>
+    <div id="am-wrapper">
+        <div id="am-banner">
+            <div class="am-text-wrapper">
+                <!-- 中间的文字 -->
+                <div id="am-text">
+                    <h2>你是开发的艺术家</h2>
+                    <p class="am-text-style">南开亿灵软件联盟是一个软件艺术联盟。所有你做的，不过是往艺术的道路更进一步</p>
+                    <p class="am-text-footer">—今日语录—</p>
+                </div>
+                <!-- 两个指向按钮 -->
+                <!-- 两个指向按钮 -->
+                <div class="director">
+                    <a class="am-icon-chevron-circle-right am-icon-lg" id="next" href="#"></a>
+                    <a class="am-icon-chevron-circle-left am-icon-lg" id="prev" href="#"></a>
                 </div>
             </div>
 
-            <!-- 四个导航模块 -->
-            <div class="detail am-container">
-                <div class="detail-item">
-                    <a href="<%= prefix %>/about">
-                        <div class="detail-item-icon">
-                            <img src="<%= prefix %>/assets/i/icon/book.png" />
-                        </div>
-                        <div class="intro">
-                            <span class="title">社团简介</span>
-                            <p class="am-fontsize">
-                                我们是一个什么样的社团呢？一群程序员？还是...
-                            </p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="detail-item">
-                    <a href="<%= prefix %>/opensource">
-                        <div class="detail-item-icon">
-                            <img src="<%= prefix %>/assets/i/icon/gear.png" />
-                        </div>
-                        <div class="intro">
-                            <span class="title">开源项目</span>
-                            <p class="am-fontsize">
-                                社团的开源项目，汇集大家的思想和实践
-                            </p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="detail-item">
-                    <a href="<%= prefix %>/archive">
-                        <div class="detail-item-icon">
-                            <img src="<%= prefix %>/assets/i/icon/bicycle.png" />
-                        </div>
-                        <div class="intro">
-                            <span class="title">社团更新</span>
-                            <p class="am-fontsize">
-                                社团厉害的活动，我们发布的技术文章，参与进来吧。
-                            </p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="detail-item">
-                    <a href="<%= prefix %>/webtools">
-                        <div class="detail-item-icon">
-                            <img src="<%= prefix %>/assets/i/icon/tools.png" />
-                        </div>
-                        <div class="intro">
-                            <span class="title">web工具</span>
-                            <p class="am-fontsize">
-                                查成绩，坐公交，申请投诉，统统都有，快来看看吧！
-                            </p>
-                        </div>
-                    </a>
+            <div id="am-imglist">
+                <div id="am-imgdiv-box">
+                    <img id="am-img" src="<%= prefix %>/assets/i/banner.png">
+                    <img id="am-img" src="<%= prefix %>/assets/i/banner2.jpg">
+                    <img id="am-img" src="<%= prefix %>/assets/i/banner3.png">
                 </div>
             </div>
-            <%- include('./footer.html') %>
+        </div>
+    </div>
+
+    <!-- 四个导航模块 -->
+    <div class="detail am-container">
+        <div class="detail-item">
+            <a href="<%= prefix %>/about">
+                <div class="detail-item-icon">
+                    <img src="<%= prefix %>/assets/i/icon/book.png" />
+                </div>
+                <div class="intro">
+                    <span class="title">社团简介</span>
+                    <p class="am-fontsize">
+                        我们是一个什么样的社团呢？一群程序员？还是...
+                    </p>
+                </div>
+            </a>
+        </div>
+
+        <div class="detail-item">
+            <a href="<%= prefix %>/opensource">
+                <div class="detail-item-icon">
+                    <img src="<%= prefix %>/assets/i/icon/gear.png" />
+                </div>
+                <div class="intro">
+                    <span class="title">开源项目</span>
+                    <p class="am-fontsize">
+                        社团的开源项目，汇集大家的思想和实践
+                    </p>
+                </div>
+            </a>
+        </div>
+
+        <div class="detail-item">
+            <a href="<%= prefix %>/archive">
+                <div class="detail-item-icon">
+                    <img src="<%= prefix %>/assets/i/icon/bicycle.png" />
+                </div>
+                <div class="intro">
+                    <span class="title">社团更新</span>
+                    <p class="am-fontsize">
+                        社团厉害的活动，我们发布的技术文章，参与进来吧。
+                    </p>
+                </div>
+            </a>
+        </div>
+
+        <div class="detail-item">
+            <a href="<%= prefix %>/webtools">
+                <div class="detail-item-icon">
+                    <img src="<%= prefix %>/assets/i/icon/tools.png" />
+                </div>
+                <div class="intro">
+                    <span class="title">web工具</span>
+                    <p class="am-fontsize">
+                        查成绩，坐公交，申请投诉，统统都有，快来看看吧！
+                    </p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <%- include('./footer.html') %>
     <script>
+        i = 0;
+        function load_inndex() {
+            i = 0;
+        };
         //banner滚动
         var banner_po = 0;
-        var banner_len = $("#am-imglist li").length-1;
+        var banner_len = $("#am-imglist li").length - 1;
 
         $(function () {
             $("#next").click(function nexp() {
-                if (banner_po == banner_len) {
-                    banner_po = 0;
-                }
-                else{
-                banner_po++;
-                }
-                $("#am-imglist li").eq(banner_po).fadeIn(600).siblings().hide();
+                i = (i + 1) % 3;
+                $("#am-imgdiv-box").css("marginLeft", -i * document.body.clientWidth + "px");
             });
 
             $("#prev").click(function prep() {
-                if (banner_po == 0) {
-                    banner_po = banner_len;
-                }
-                else{
-                banner_po--;
-                }
-                $("#am-imglist li").eq(banner_po).fadeIn(600).siblings().hide();
+                i = (i - 1) < 0 ? 2 : (i - 1) % 3;
+                $("#am-imgdiv-box").css("marginLeft", -i * document.body.clientWidth + "px");
             });
         });
     </script>
-    </body>
-    </html>
+</body>
+
+</html>
