@@ -285,7 +285,7 @@ body {
 
 #am-imgdiv-box {
 	width: 300%;
-	height: 390px;
+	height: 100%;
     -webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
     -o-transition: all 1s ease-in-out;
@@ -293,7 +293,7 @@ body {
 }
 
 #am-img {
-	width: 33.3%;
+	width: 33.33%;
 	height: 100%;
 	float: left;
 }

@@ -108,6 +108,9 @@
                 $("#am-imgdiv-box").css("marginLeft", -i * document.body.clientWidth + "px");
             });
         });
+        window.onresize = function () {
+            $("#am-imgdiv-box").css("marginLeft", -i * document.body.clientWidth + "px");  
+        }
     </script>
 </body>
 
