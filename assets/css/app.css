@@ -101,17 +101,6 @@ body {
 	z-index: -1;
 }
 
-#am-imglist li {
-	float: left;
-	display: inline;
-	height: 100%;
-	width: 100%;
-}
-
-#am-imglist li img {
-	height: 100%;
-}
-
 /*------>添加部分*/
 
 #am-banner {
@@ -208,8 +197,7 @@ body {
 	width: 100%;
 }
 
-.am-summary-title,
-.am-summary-content {
+.am-summary-title, .am-summary-content {
 	text-align: center;
 	margin: 0;
 	color: black;
@@ -269,8 +257,7 @@ body {
 	font-size: 30px;
 }
 
-.am-leftpart,
-.am-rightpart {
+.am-leftpart, .am-rightpart {
 	width: 500px;
 }
 
@@ -296,22 +283,17 @@ body {
 	background: #333333;
 }
 
-#am-imglist {
-	height: 390px;
-	margin: 0;
-	padding: 0;
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	z-index: -1;
-	background-color: #AAAAAA;
-	overflow: hidden;
+#am-imgdiv-box {
+	width: 300%;
+	height: 100%;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
-#am-imglist li {
-	float: left;
-	display: inline;
+#am-img {
+	width: 33.33%;
 	height: 100%;
-	width: 100%;
+	float: left;
 }
