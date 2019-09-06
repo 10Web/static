@@ -1,6 +1,6 @@
 {
   "name": "static",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "build": 1,
   "description": "a simple hc-bee boilerplate",
   "main": "app.js",
